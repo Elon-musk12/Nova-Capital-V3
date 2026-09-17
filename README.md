@@ -1,28 +1,37 @@
-# Nova Capital
+# Nova Capital — Next.js 15
 
-A clean Next.js 15 App Router investment-platform demo with a dark-luxury visual system, responsive homepage, login route, register route, and Supabase Auth-ready client.
+A responsive dark-luxury investment platform demo with Next.js 15 App Router and Supabase Auth-ready login/register forms.
+
+## Structure
+
+- `app/` — App Router pages, layouts, and global CSS
+- `app/login/page.tsx` — Login route
+- `app/register/page.tsx` — Register route
+- `components/` — Reusable UI components
+- `supabase.ts` — Browser Supabase client at the project root
+- `package.json` — Next.js 15 dependencies and scripts
 
 ## Run locally
 
 ```bash
 npm install
-cp .env.example .env.local
-# add your Supabase URL and anon key to .env.local
 npm run dev
 ```
 
-Open http://localhost:3000
-
-Routes:
-- `/` — landing page
-- `/login` — Supabase password login form
-- `/register` — Supabase account registration form
+Then open `http://localhost:3000`.
 
 ## Supabase setup
 
-1. Create a Supabase project.
-2. Copy the project URL and anon key into `.env.local`.
-3. In Supabase Auth settings, configure email confirmation and redirect URLs as desired.
-4. The form uses `signInWithPassword` and `signUp` from `@supabase/ssr` browser client.
+1. Copy `.env.example` to `.env.local`.
+2. Add your Supabase project URL and anon key:
 
-This is a front-end demo. Investment figures, charts, security claims, and account values are illustrative UI content and are not connected to a live brokerage or financial service.
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+## Vercel deployment
+
+Deploy the folder containing `package.json`, `app/`, and `components/` as the project root. If you upload the ZIP contents into a repository subfolder named `Nova-Capital-V3`, set Vercel's **Root Directory** to `Nova-Capital-V3`.
+
+This is a front-end demo. It does not execute real trades or connect to a brokerage account.

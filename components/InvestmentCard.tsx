@@ -1,0 +1,3 @@
+import { Chart } from './Chart';
+const logos:Record<string,string>={Apple:'●',Tesla:'T',Vanguard:'V',Microsoft:'▦'};
+export function InvestmentCard({name,ticker,price,change,risk='Low Risk'}:{name:string;ticker:string;price:string;change:string;risk?:string}){return <article className="card"><div className="card-head"><span className="company">{logos[name]||'◈'}</span><span>{name} {name!=='Vanguard'&&'Inc.'}</span></div><div className="ticker">{ticker}</div><div className="price">{price}<span className="positive">↗ {change}</span></div><Chart/><div className="tags"><span className="tag">{name==='Vanguard'?'ETFs':'Stocks'}</span><span className={`tag ${risk==='High Risk'?'risk':''}`}>{risk}</span></div><button className="btn btn-dark">Invest Now</button></article>}

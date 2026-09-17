@@ -1,0 +1,1 @@
+export function Chart(){return <svg className="chart" viewBox="0 0 320 80" preserveAspectRatio="none"><path d="M0 65 L15 55 L25 59 L38 43 L50 49 L62 32 L75 40 L90 26 L103 36 L115 24 L128 34 L140 20 L153 27 L166 16 L180 24 L194 11 L206 18 L220 8 L234 18 L247 4 L260 11 L274 2 L288 8 L302 0 L320 5"/></svg>}
