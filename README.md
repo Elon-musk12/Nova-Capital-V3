@@ -8,7 +8,7 @@ A responsive dark-luxury investment platform demo with Next.js 15 App Router and
 - `app/login/page.tsx` — Login route
 - `app/register/page.tsx` — Register route
 - `components/` — Reusable UI components
-- `supabase.ts` — Browser Supabase client at the project root
+- `lib/supabase.ts` — Browser Supabase client
 - `package.json` — Next.js 15 dependencies and scripts
 
 ## Run locally
