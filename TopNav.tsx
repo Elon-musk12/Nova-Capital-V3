@@ -1,3 +1,0 @@
-import Link from 'next/link';
-import { Brand } from './Brand';
-export function TopNav(){return <header className="nav"><div className="container nav-inner"><Brand/><nav className="links"><Link href="/">Home</Link><Link href="#investments">Investments</Link><Link href="#markets">Markets</Link><Link href="#about">About</Link><Link href="#pricing">Pricing</Link><Link href="#resources">Resources⌄</Link></nav><div className="nav-actions"><span className="icon">⌕</span><Link className="btn btn-ghost" href="/login">Login</Link><Link className="btn btn-gold" href="/register">Open Account</Link></div></div></header>}
